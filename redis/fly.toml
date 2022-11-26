@@ -1,0 +1,5 @@
+app = "constellatione-redis"
+
+[[mounts]]
+  source = "constellatione_redis"
+  destination = "/data"

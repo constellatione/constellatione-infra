@@ -1,0 +1,15 @@
+app = "constellatione-sidekiq"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[env]
+  LOCAL_DOMAIN = "constellati.one"
+  SMTP_DOMAIN = "mail.constellati.one"
+  RAILS_ENV = "production"
+  RAILS_LOG_TO_STDOUT = "enabled"
+  WEB_CONCURRENCY = "2"
+  REDIS_HOST = "constellatione-redis.internal"
+  REDIS_PORT = "6379"
+  PRIMARY_REGION="nrt"
+  DB_NAME="mastodon_production"
