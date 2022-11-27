@@ -20,28 +20,9 @@ kill_timeout = 5
   S3_HOSTNAME="s3-ap-northeast-1.amazonaws.com"
   S3_ALIAS_HOST="d1rwm3q2mm4wfd.cloudfront.net"
   PRIMARY_REGION="nrt"
+  TRUSTED_PROXY_IP="172.19.0.0/16,149.248.0.0/16"
+  BIND="::"
 
 [[statics]]
   guest_path = "/opt/mastodon/public"
   url_prefix = "/"
-
-[[services]]
-  internal_port = 3000
-  protocol = "tcp"
-
-  [[services.ports]]
-    handlers = ["http"]
-    port = 3000
-
-  [[services.tcp_checks]]
-    grace_period = "10s"
-    interval = "10s"
-    restart_limit = 0
-    timeout = "2s"
-
-  [[services.http_checks]]
-    path = "/health"
-    grace_period = "10s"
-    interval = "10s"
-    restart_limit = 0
-    timeout = "2s"

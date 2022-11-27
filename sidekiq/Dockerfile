@@ -1,2 +1,2 @@
-FROM ghcr.io/constellatione/mastodon:v4.0.2
+FROM ghcr.io/constellatione/mastodon:v4.0.2-1
 ENTRYPOINT ["bundle", "exec", "sidekiq"]
